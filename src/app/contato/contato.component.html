@@ -1,0 +1,29 @@
+<div class="content">
+    
+    <mat-card class="contato">
+        <mat-card-header>
+            <mat-card-title><p>Contato</p></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form">
+                <mat-form-field class="form-full-width">
+                <input  matInput [(ngModel)]="nome" name="nomeContato"  placeholder="Nome"   >
+                </mat-form-field>
+                <mat-form-field class="email">
+                    <input matInput [(ngModel)]="email" name="emailContato" placeholder=" email" required>
+                
+                </mat-form-field>
+                <mat-form-field class="text">
+                        <textarea matInput [(ngModel)]="msg"  name="txtContato" placeholder="Mensagem"></textarea>
+                </mat-form-field>
+                
+            </form>
+            <button mat-raised-button color="primary" (click)="sendEmail()">Enviar  <mat-icon>send</mat-icon></button>
+        </mat-card-content>
+                
+    </mat-card>
+   
+</div>
+
+  
+  

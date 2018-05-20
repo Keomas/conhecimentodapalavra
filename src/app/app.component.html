@@ -1,0 +1,67 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+  <div class="menu" >  
+    <mat-toolbar role="header" color="primary">
+        <span>
+          <a mat-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </a>
+          </span>
+        
+        <span>
+          <button mat-button [routerLink]="['/home']">
+            <mat-icon>home</mat-icon> 
+            Home
+          </button>
+          </span>
+        
+        
+        
+        <span>
+          <button mat-button [routerLink]="['/search']">
+            <mat-icon>search</mat-icon>  
+            Pesquisar
+          </button>
+        </span>
+        <span class="space"></span>
+        <span>
+          <button mat-button [routerLink]="['/contato']">
+              <mat-icon>message</mat-icon>
+            
+            Contato
+          </button>
+        </span>  
+
+        <span>
+          <button mat-button>
+            <mat-icon>info</mat-icon>
+            Sobre
+          </button>
+        </span>
+      </mat-toolbar>
+  </div>
+  <div class="content-middle">
+    <mat-sidenav-container>
+      
+      <mat-sidenav #sidenav mode="side" class="left-content">
+        <mat-nav-list>
+          <mat-list-item class="content-menu-item" *ngFor="let citation of citationArray"  [routerLink]="['/painel', citation.id]">
+            <a matLine>{{ citation.titulo }}</a>&nbsp;&nbsp;
+            <img src="/assets/highlight.png">
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-sidenav>
+      <router-outlet></router-outlet>
+     
+    </mat-sidenav-container>
+    
+   
+  </div>
+  
+   
+  <mat-toolbar  class="footer" color="primary">
+    <span class="space"></span>
+  <img src="/assets/cross2.png">Copyright. Todos os direitos Reservados SoftBucket Inc.
+  <!--Icons made by "https://www.flaticon.com/authors/anhgreen"  from "https://www.flaticon.com/"  is licensed by http://creativecommons.org/licenses/by/3.0/" -->
+  </mat-toolbar>   

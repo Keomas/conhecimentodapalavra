@@ -1,0 +1,15 @@
+<div id="search-component">
+  <div id="res">
+    <h4>Digite sua pesquisa:</h4>
+
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+    <ul class="search-result">
+      <li *ngFor="let citation of citations$ | async" >
+        <a [routerLink]="['/painel', citation.id]">
+          {{citation.titulo}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

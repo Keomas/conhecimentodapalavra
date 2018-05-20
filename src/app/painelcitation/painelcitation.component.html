@@ -1,0 +1,34 @@
+<div class="middle" *ngIf="SelectedCitation">
+  <mat-card class="carousel">
+    <mat-card-header>
+      <mat-card-title  id="title">{{SelectedCitation.titulo}}</mat-card-title>
+    </mat-card-header>  
+    <mat-card-content>
+          <p [innerHTML]="SelectedCitation.content | editcitation">
+            
+          </p>
+          <mat-card-subtitle id="subtitle">{{SelectedCitation.ref}}</mat-card-subtitle>
+        </mat-card-content>
+        <p id="comentario"></p>
+        <p id="comentariobody">
+          {{SelectedCitation.comment}}
+        </p>
+          <mat-card-actions>
+            <button mat-icon-button shareButton="facebook"     
+              [sbTitle]="SelectedCitation.titulo" >
+                <img src="/assets/facebook.png"/>
+              </button>
+              <button mat-icon-button shareButton="twitter" 
+              [sbTitle]="SelectedCitation.titulo" >
+                <img src="/assets/twitter.png"/>
+              </button>
+              
+      </mat-card-actions>
+  </mat-card>
+  
+</div>
+
+<div class="middle" *ngIf="!SelectedCitation" >
+    <div class="loader">Loading...</div>
+</div>
+

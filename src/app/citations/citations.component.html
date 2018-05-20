@@ -1,0 +1,30 @@
+<div class="home" *ngIf="citationsList" >
+  <mat-card  class="carousel" *ngFor="let cite of citationsList" [id]="cite.id">
+      <mat-card-header>
+        <mat-card-title  id="title">{{cite.titulo}}</mat-card-title>
+       </mat-card-header>  
+      <mat-card-content>
+            <p [innerHTML]="cite.content | editcitation">
+              
+            </p>
+            <mat-card-subtitle id="subtitle">{{cite.ref}}</mat-card-subtitle>
+          </mat-card-content>
+          
+          <p id="comentariobody">
+            {{cite.comment}}
+          </p>
+            <mat-card-actions>
+              <button mat-icon-button shareButton="facebook" [sbUrl]="href+'/painel/'+cite.id"   [sbTitle]="cite.titulo" >
+                  <img src="/assets/facebook.png"/> 
+                </button>
+                <button mat-icon-button shareButton="twitter" [sbUrl]="href+'/painel/'+cite.id" [sbTitle]="cite.titulo"  >
+                  <img src="/assets/twitter.png"/>
+                </button>
+        </mat-card-actions>
+    </mat-card>
+    
+</div>
+
+<div class="home" *ngIf="!citationsList" >
+    <div class="loader">Loading...</div>
+</div>

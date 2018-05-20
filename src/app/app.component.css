@@ -1,0 +1,132 @@
+
+
+
+.space{
+
+    flex: 1 1 auto;    
+}
+
+
+.menu{
+    width: 100%;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 5px grey;
+     /* Position the navbar at the top of the page */
+}
+
+.left-content{
+    /*background-color: #132584*/
+    margin-top: 4%;  
+    position: fixed;
+   height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:#fafafa98;
+    border-right: 1px solid #B4B6B8;
+    overflow: auto;
+   
+}
+
+.content-middle{
+  position: fixed;
+    
+    height:100%;
+  z-index: -1  ;
+  width: 100%;
+  margin-top:3.5%;
+  background-color:#fafafa98;
+overflow: scroll;
+ }
+
+ .content-menu-item{
+    color:#616161;
+    /*color:#e6e8f5;*/
+    border-bottom: solid;
+    border-width: 3px;
+    border-color: #d8d6d6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-weight: 900 ;
+    font-size: 0.888em;
+}
+.content-menu-item:hover{
+    
+    color:#0D47A1;  
+    background-color: #DAD7D7;
+}
+
+.footer{
+    position: fixed;
+      width: 100%;
+       font-size: 65%;
+       bottom: 0;
+       margin-top: 10%;
+      height: 7%;
+       box-shadow: 0px -3px 10px rgb(82, 81, 81);
+       left: 0;
+    background-color: #3F51B5;
+    text-align: end;
+    color:#E8EAF6;
+    
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    }
+    
+ 
+/*Style to mobile
+ 
+*/
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 780px)
+and (-webkit-min-device-pixel-ratio: 2) 
+and (orientation: landscape){
+    .space{
+        
+            flex: 1 1 auto;    
+        }
+        
+   
+    .menu{
+        width: 100%;
+        overflow: hidden;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0;
+        left: 0;
+        box-shadow: 0px 5px 5px grey;
+         /* Position the navbar at the top of the page */
+    }
+  
+
+}
+/* Portrait */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+    .space{
+        
+            flex:none;    
+        }
+        
+   
+    .menu{
+        width: 450px;
+       
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0;
+        left: 0;
+        box-shadow: 0px 5px 5px grey;
+         /* Position the navbar at the top of the page */
+    }
+
+    
+}
+
+/* right:0px !important;
+   top:0px !important;*/
